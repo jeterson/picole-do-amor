@@ -36,23 +36,26 @@ module.exports = (io) => {
     fraseprodpop  = {}; //await textos.getFraseProdPop();
     comofunciona = {}; //await textos.getComoFunciona();
 
-    conn.query(
+
+    res.render('index', Object.assign({}, defaults, {
+      title: 'Picolé do Amor!',
+      menus: [],
+      headerIndex: true,
+      frase,
+      sucesso,
+      fraseprodpop,
+      comofunciona
+    }));
+
+   /* conn.query(
       "SELECT * FROM tb_menus ORDER BY title",
       (err, results, fields) => {
 
-        res.render('index', Object.assign({}, defaults, {
-          title: 'Picolé do Amor!',
-          menus: results,
-          headerIndex: true,
-          frase,
-          sucesso,
-          fraseprodpop,
-          comofunciona
-        }));
+        
 
       }
     );
-
+*/
   });
 
   router.get('/contact', (req, res, next) => {
