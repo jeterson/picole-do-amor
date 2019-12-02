@@ -29,12 +29,12 @@ module.exports = (io) => {
     body: {}
   };
 
-  router.get('/', async(req, res, next) => {
+  router.get('/', (req, res, next) => {
 
-    frase = await textos.getFrase();
-    sucesso = await textos.getNossoSucesso();
-    fraseprodpop = await textos.getFraseProdPop();
-    comofunciona = await textos.getComoFunciona();
+    frase = {}; //await textos.getFrase();
+    sucesso = {}; //await textos.getNossoSucesso();
+    fraseprodpop  = {}; //await textos.getFraseProdPop();
+    comofunciona = {}; //await textos.getComoFunciona();
 
     conn.query(
       "SELECT * FROM tb_menus ORDER BY title",
