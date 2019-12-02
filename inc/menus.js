@@ -10,6 +10,7 @@ module.exports = {
         `    SELECT * FROM tb_menus ORDER BY id
                 `, (err, results) => {
         if (err) {
+          console.log(err);
           reject(err);
         }
         resolve(results);
