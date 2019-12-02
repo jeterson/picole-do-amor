@@ -1,0 +1,9 @@
+<% if (typeof success === 'string') { %>
+    <div class="alert alert-success" role="alert">
+        <%=success%>
+    </div>
+    <% } %>
+    <% if (typeof error === 'string') { %>
+    <div class="alert alert-danger" role="alert"> <strong>Ops!</strong> <%=error%>
+    </div>
+    <% } %>

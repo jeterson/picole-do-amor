@@ -1,0 +1,80 @@
+<div class="gtco-section" style="padding-bottom: 14em;">
+    <div class="gtco-container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-6 animate-box">
+
+                    <%- include('alerts') -%>
+
+
+                    <h3>Nos Informe Seus Dados</h3> 
+                    <form action="/reservations" method="post" id="tt" >
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="inputName">Nome</label>
+                                <input type="text" id="inputName" name="inputName" class="form-control"
+                                    value="<%= body.inputName %>">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" class="form-control"
+                                    value="<%= body.email %>">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="inputPeople">Pessoas</label>
+                                <select id="inputPeople" name="people" class="form-control">
+                                    <option value=""> -- selecione -- </option>
+                                    <option <% if (body.people == 1) { %>selected<% } %> value="1">1</option>
+                                    <option <% if (body.people == 2) { %>selected<% } %> value="2">2</option>
+                                    <option <% if (body.people == 3) { %>selected<% } %> value="3">3</option>
+                                    <option <% if (body.people == 4) { %>selected<% } %> value="4">4</option>
+                                    <option <% if (body.people == 5) { %>selected<% } %> value="5">5+</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="inputDate">Data</label>
+                                <input type="text" id="inputDate" name="date" class="form-control"
+                                    value="<%= body.date %>">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <label for="inputTime">Hora</label>
+                                <input type="text" id="inputTime" name="time" class="form-control"
+                                    value="<%= body.time %>">
+                            </div>
+                        </div>
+
+                        <div class="row form-group">
+                            <div class="col-md-12">
+                                <input type="submit" class="btn btn-primary btn-block" value="Agendar Agora">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-5 col-md-push-1 animate-box">
+
+                    <div class="gtco-contact-info">
+                        <h3>Informações de Contato</h3>
+                        <ul>
+                            <li class="address">Avenida, Marinho Pereira Gama, 101 - 12ª andar - Centro, Pimenta Bueno -
+                                RO, 76970-000</li>
+                            <li class="phone"><a href="#">(69) 3451-0000</a></li>
+                            <li class="email"><a href="#">rafaelameilda@hotmail.com</a></li>
+                            <li class="url"><a href="#">siteemdesemvolvimento.com</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
